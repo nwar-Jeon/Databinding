@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.nwar.individual.databinding", appContext.packageName)
+        assertEquals("com.nwar.individual.databinding1", appContext.packageName)
     }
 }

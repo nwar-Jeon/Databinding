@@ -8,17 +8,16 @@ import android.widget.Toast
 import com.nwar.individual.databinding.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    val user = Data()
     lateinit var binding : ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView<ActivityMainBinding>(this,R.layout.activity_main)
-        binding.activity = this
-        binding.tvText1.text = "Hello!"
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.mainActivity = this
+        binding.data = user
     }
-
-    fun setOnClick(v : View){
-        when(v.id){
-            binding.tvText1.id -> Toast.makeText(this,"터치",Toast.LENGTH_SHORT).show()
-        }
+    fun setOnClickText(view : View){
+        Toast.makeText(this,"Click!",Toast.LENGTH_SHORT).show()
+        user.data += "?"
     }
 }
