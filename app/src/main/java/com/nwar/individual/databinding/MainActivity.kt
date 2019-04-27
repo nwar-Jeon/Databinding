@@ -18,6 +18,6 @@ class MainActivity : AppCompatActivity() {
     }
     fun setOnClickText(view : View){
         Toast.makeText(this,"Click!",Toast.LENGTH_SHORT).show()
-        user.data += "?"
+        user.data.set(user.data.get()+"?")
     }
 }

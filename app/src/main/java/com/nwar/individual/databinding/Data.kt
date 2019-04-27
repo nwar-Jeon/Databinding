@@ -1,3 +1,6 @@
 package com.nwar.individual.databinding
 
-data class Data(var data : String = "안녕")
+import android.databinding.BaseObservable
+import android.databinding.ObservableField
+
+data class Data(var data : ObservableField<String> = ObservableField("안녕"))
